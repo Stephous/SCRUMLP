@@ -30,12 +30,6 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
         return 3;
     }
     
-    public static String convertArrayToString(String[] strArray) {
-
-        return Arrays.toString(strArray);
-
-    }
-
     @Override
     public String convertArabeToRoman(Integer nbr) throws IllegalArgumentException {
         
