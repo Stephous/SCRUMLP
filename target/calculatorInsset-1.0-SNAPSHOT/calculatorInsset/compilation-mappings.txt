@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1503ECD906E924673BE63C9938772620.cache.js
 user.agent ie9
 
@@ -13,4 +14,21 @@ user.agent safari
 B9ADE0B00A1EEC04814AAEF14BA754DE.cache.js
 user.agent ie8
 
+=======
+07F8373278A1B99C84CE318DD8CF0101.cache.js
+user.agent safari
+
+1650B10F6D87522858F1DE78D976686E.cache.js
+user.agent ie9
+
+450C9C0132016D8875E17D014ABA6C91.cache.js
+user.agent ie10
+
+52B4D7D56B2718DF387D660DC9C6EA6D.cache.js
+user.agent ie8
+
+599DC3B2B072B080AF60EF0C5BDA535F.cache.js
+user.agent gecko1_8
+
+>>>>>>> Gael
 Devmode:devmode.js

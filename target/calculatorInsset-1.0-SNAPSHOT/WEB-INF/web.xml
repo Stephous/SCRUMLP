@@ -27,6 +27,7 @@
     <url-pattern>/calculatorInsset/romanConvert</url-pattern>
   </servlet-mapping>
   
+<<<<<<< HEAD
   <servlet>
     <servlet-name>pourcentage</servlet-name>
     <servlet-class>org.insset.server.PourcentageServiceImpl</servlet-class>
@@ -37,6 +38,8 @@
     <url-pattern>/calculatorInsset/pourcentage</url-pattern>
   </servlet-mapping>
   
+=======
+>>>>>>> Gael
   <!-- Add your servlet -->
   
   <!-- Default page to serve -->
