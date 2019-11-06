@@ -8,11 +8,11 @@
     <div class="bs-section">
         <g:FlowPanel>
             <g:FlowPanel>
-                <g:Label>Quelle la valeur d'origne et la remise a appliquer</g:Label>
+                <g:Label>Quelle est la valeur d'origne et la remise a appliquée</g:Label>
             </g:FlowPanel>
             <g:FlowPanel>          
-              <g:TextBox ui:field="valR" text="Entrer une valeur"/>
-              <g:TextBox ui:field="valPc1" text="Entrer une valeur"/>
+              <g:TextBox ui:field="valR" text="Entrer une valeur positive"/>
+              <g:TextBox ui:field="valPc1" text="Entrer un pourcentage compris entre -100 et 100"/>
               <g:SubmitButton ui:field="boutonNewValue" text="Calc Remise"/>
             </g:FlowPanel>
             <g:FlowPanel>
@@ -27,11 +27,11 @@
         </g:FlowPanel>
         <g:FlowPanel>
             <g:FlowPanel>
-                <g:Label>Quelle valeur voulez-vous convertir en chiffre romain</g:Label>
+                <g:Label>Quelle est la valeur apres remise et la remise appliquée</g:Label>
             </g:FlowPanel>
             <g:FlowPanel>          
-              <g:TextBox ui:field="valA" text="Entrer une valeur"/>
-              <g:TextBox ui:field="valPc2" text="Entrer une valeur"/>
+              <g:TextBox ui:field="valA" text="Entrer une valeur positive"/>
+              <g:TextBox ui:field="valPc2" text="Entrer une valeur entre -100 et 100"/>
               <g:SubmitButton ui:field="boutonPreValue" text="Calc Avant Remise"/>
             </g:FlowPanel>
             <g:FlowPanel>
