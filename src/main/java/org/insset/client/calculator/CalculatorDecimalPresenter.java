@@ -150,12 +150,12 @@ public class CalculatorDecimalPresenter extends Composite {
             value = Integer.parseInt(valA.getText());
         } catch (NumberFormatException e) {
             errorLabelAToR.addStyleName("serverResponseLabelError");
-            errorLabelAToR.setText("Format incorect");
+            errorLabelAToR.setText("Ecrire un nombre entre 1 et 1999");
             return;
         }
-        if (!FieldVerifier.isValidDecimal(value)) {
+        if (!FieldVerifier.isValidDecimalAtoR(value)) {
             errorLabelAToR.addStyleName("serverResponseLabelError");
-            errorLabelAToR.setText("Format incorect");
+            errorLabelAToR.setText("Ecrire un nombre entre 1 et 1999");
             return;
         }
         service.convertArabeToRoman(Integer.parseInt(valA.getText()), new AsyncCallback<String>() {
