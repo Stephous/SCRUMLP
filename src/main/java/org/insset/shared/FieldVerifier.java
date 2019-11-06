@@ -52,7 +52,16 @@ public class FieldVerifier {
      * @return true if valid, false if invalid
      */
     public static boolean isValidDecimal(Integer nbr) {
-        //Implement your code
+        if ((nbr == null) || (nbr < 0)|| (nbr % 1 != 0)) {
+            return false;
+        }
+        return true;
+    }
+    
+    public static boolean isValidPourcentage(Integer nbr) {
+        if ((nbr == null) || (nbr < -100)|| (nbr % 1 != 0)|| (nbr >100)) {
+            return false;
+        }
         return true;
     }
 
