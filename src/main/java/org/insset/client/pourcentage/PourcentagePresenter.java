@@ -112,7 +112,7 @@ public class PourcentagePresenter extends Composite {
             value1 = Integer.parseInt(valR.getText());
         } catch (NumberFormatException e) {
             errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Format incorect11");
+            errorLabelNewValue.setText("Valeur incorect");
             return;
         }
         Integer value2 = null;
@@ -120,17 +120,17 @@ public class PourcentagePresenter extends Composite {
             value2 = Integer.parseInt(valPc1.getText());
         } catch (NumberFormatException e) {
             errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Format incorect21");
+            errorLabelNewValue.setText("Pourcentage incorrect");
             return;
         }
         if (!FieldVerifier.isValidDecimal(value1)) {
             errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Format incorect12");
+            errorLabelNewValue.setText("Valeur incorect (doit etre positive)");
             return;
         }
         if (!FieldVerifier.isValidPourcentage(value2)) {
             errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Format incorect22");
+            errorLabelNewValue.setText("Pourcentage incorect (doit etre compris entre -100 et 100");
             return;
         }
         service.NewValue(value1,value2, new AsyncCallback<Integer>() {
@@ -141,7 +141,9 @@ public class PourcentagePresenter extends Composite {
 
             public void onSuccess(Integer result) {
                 errorLabelNewValue.setText(" ");
-                new DialogBoxInssetPresenter("Remise", valR.getText(), String.valueOf(result));
+                String envoi;
+                envoi = valR.getText() + " et " + valPc1.getText() + "%";
+                new DialogBoxInssetPresenter("Remise", envoi , String.valueOf(result));
             }
         });
     }
@@ -155,7 +157,7 @@ public class PourcentagePresenter extends Composite {
             value1 = Integer.parseInt(valA.getText());
         } catch (NumberFormatException e) {
             errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Format incorect");
+            errorLabelNewValue.setText("Valeur incorect");
             return;
         }
         Integer value2 = null;
@@ -163,17 +165,17 @@ public class PourcentagePresenter extends Composite {
             value2 = Integer.parseInt(valPc2.getText());
         } catch (NumberFormatException e) {
             errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Format incorect");
+            errorLabelNewValue.setText("Pourcentage incorrect");
             return;
         }
         if (!FieldVerifier.isValidDecimal(value1)) {
             errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Format incorect");
+            errorLabelNewValue.setText("Valeur incorect (doit etre positive)");
             return;
         }
         if (!FieldVerifier.isValidPourcentage(value2)) {
             errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Format incorect");
+            errorLabelNewValue.setText("Pourcentage incorect (doit etre compris entre -100 et 100");
             return;
         }
         service.PreValue(value1,value2, new AsyncCallback<Integer>() {
@@ -184,7 +186,9 @@ public class PourcentagePresenter extends Composite {
 
             public void onSuccess(Integer result) {
                 errorLabelNewValue.setText(" ");
-                new DialogBoxInssetPresenter("Avant Remise", valR.getText(), String.valueOf(result));
+                String envoi;
+                envoi = valR.getText() + " et " + valPc1.getText() + "%";
+                new DialogBoxInssetPresenter("Avant Remise", envoi, String.valueOf(result));
             }
         });
     }

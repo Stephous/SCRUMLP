@@ -37,6 +37,15 @@ public class GwtTestcalculatorInsset extends GWTTestCase {
         assertTrue(FieldVerifier.isValidName("ab"));
         assertTrue(FieldVerifier.isValidName("abc"));
         assertTrue(FieldVerifier.isValidName("abcd"));
+        assertTrue(FieldVerifier.isValidDecimal(1));
+        assertFalse(FieldVerifier.isValidDecimal(0));
+        assertFalse(FieldVerifier.isValidDecimal(null));
+        assertTrue(FieldVerifier.isValidPourcentage(-100));
+        assertTrue(FieldVerifier.isValidPourcentage(0));
+        assertTrue(FieldVerifier.isValidPourcentage(100));
+        assertFalse(FieldVerifier.isValidPourcentage(-101));
+        assertFalse(FieldVerifier.isValidPourcentage(101));
+        assertFalse(FieldVerifier.isValidPourcentage(null));
     }
 
     /**
@@ -72,5 +81,6 @@ public class GwtTestcalculatorInsset extends GWTTestCase {
             }
         });
     }
+    
 
 }
