@@ -39,33 +39,29 @@ public class RomanConverterServiceImplTest {
 
     /**
      * Test of convertDateYears method, of class RomanConverterServiceImpl.
-     
+    */
     @Test
     public void testConvertDateYears() {
         System.out.println("convertDateYears");
         String nbr = "";
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
-        String expResult = "";
+        String expResult = "XV/III/MX";
         String result = instance.convertDateYears(nbr);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
+    }
 
     /**
      * Test of convertRomanToArabe method, of class RomanConverterServiceImpl.
-     
+    */
     @Test
     public void testConvertRomanToArabe() {
         System.out.println("convertRomanToArabe");
         String nbr = "";
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
-        Integer expResult = null;
+        Integer expResult = 3;
         Integer result = instance.convertRomanToArabe(nbr);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }*/
+    }
 
     /**
      * Test of convertArabeToRoman method, of class RomanConverterServiceImpl.
@@ -76,6 +72,45 @@ public class RomanConverterServiceImplTest {
         Integer nbr = 1234;
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
         String expResult = "MCCXXXIV";
+        String result = instance.convertArabeToRoman(nbr);
+        assertEquals(expResult, result);
+        
+    }
+    /**
+     * Test of convertArabeToRoman method, of class RomanConverterServiceImpl.
+     */
+    @Test
+    public void testConvertArabeToRomanOKpetit() {
+        System.out.println("convertArabeToRoman");
+        Integer nbr = 123;
+        RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
+        String expResult = "CXXIII";
+        String result = instance.convertArabeToRoman(nbr);
+        assertEquals(expResult, result);
+        
+    }
+    /**
+     * Test of convertArabeToRoman method, of class RomanConverterServiceImpl.
+     */
+    @Test
+    public void testConvertArabeToRomanOKpetitpetit() {
+        System.out.println("convertArabeToRoman");
+        Integer nbr = 12;
+        RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
+        String expResult = "XII";
+        String result = instance.convertArabeToRoman(nbr);
+        assertEquals(expResult, result);
+        
+    }
+    /**
+     * Test of convertArabeToRoman method, of class RomanConverterServiceImpl.
+     */
+    @Test
+    public void testConvertArabeToRomanOKpetitpetitpetit() {
+        System.out.println("convertArabeToRoman");
+        Integer nbr = 1;
+        RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
+        String expResult = "I";
         String result = instance.convertArabeToRoman(nbr);
         assertEquals(expResult, result);
         
