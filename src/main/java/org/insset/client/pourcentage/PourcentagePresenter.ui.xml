@@ -13,10 +13,8 @@
             <g:FlowPanel>          
               <g:TextBox ui:field="valR" text="Entrer une valeur positive"/>
               <g:TextBox ui:field="valPc1" text="Entrer un pourcentage compris entre -100 et 100"/>
+              <g:Label ui:field="errorLabelNewValue" ></g:Label>
               <g:SubmitButton ui:field="boutonNewValue" text="Calc Remise"/>
-            </g:FlowPanel>
-            <g:FlowPanel>
-                <g:Label ui:field="errorLabelNewValue" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel >
                 
@@ -32,10 +30,8 @@
             <g:FlowPanel>          
               <g:TextBox ui:field="valA" text="Entrer une valeur positive"/>
               <g:TextBox ui:field="valPc2" text="Entrer une valeur entre -100 et 100"/>
+              <g:Label ui:field="errorLabelPreValue" ></g:Label>
               <g:SubmitButton ui:field="boutonPreValue" text="Calc Avant Remise"/>
-            </g:FlowPanel>
-            <g:FlowPanel>
-                <g:Label ui:field="errorLabelPreValue" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel>
                 

@@ -61,6 +61,7 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
                 case 4:
                   chaine = new String[] {T_M[arr[0]],T_Cent[arr[1]],T_Diz[arr[2]],T_Unit[arr[3]]};
                 break;
+                default: chaine = null;break;
             }
 
          String joinedString = String.join("", chaine);

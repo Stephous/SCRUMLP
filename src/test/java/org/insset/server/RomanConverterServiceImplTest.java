@@ -71,32 +71,113 @@ public class RomanConverterServiceImplTest {
      * Test of convertArabeToRoman method, of class RomanConverterServiceImpl.
      */
     @Test
-    public void testConvertArabeToRomanOK() {
-        System.out.println("convertArabeToRoman");
+    public void testConvertArabeToRomanOK4() {
+        //given
         Integer nbr = 1234;
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
         String expResult = "MCCXXXIV";
+        
+        //when
         String result = instance.convertArabeToRoman(nbr);
+        
+        //then
         assertEquals(expResult, result);
         
     }
     
     @Test
+    public void testConvertArabeToRomanOK3() {
+        //given
+        Integer nbr = 123;
+        RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
+        String expResult = "CXXIII";
+        
+        //when
+        String result = instance.convertArabeToRoman(nbr);
+        
+        //then
+        assertEquals(expResult, result);
+        
+    }
+    
+    @Test
+    public void testConvertArabeToRomanOK2() {
+        //given
+        Integer nbr = 12;
+        RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
+        String expResult = "XII";
+        
+        //when
+        String result = instance.convertArabeToRoman(nbr);
+        
+        //then
+        assertEquals(expResult, result);
+        
+    }
+    
+    @Test
+    public void testConvertArabeToRomanOK1() {
+        //given
+        Integer nbr = 1;
+        RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
+        String expResult = "I";
+        
+        //when
+        String result = instance.convertArabeToRoman(nbr);
+        
+        //then
+        assertEquals(expResult, result);
+        
+    }
+    
+    
+    @Test
     public void testConvertArabeToRomannull() {
-        System.out.println("convertArabeToRoman");
+        //given
         Integer nbr = null;
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
+        
+        
+        //when
         String expResult = null;
         try{
             String result = instance.convertArabeToRoman(nbr);
         }catch(NullPointerException e){
-        
+        //then
         assertTrue(true);
         }
         
     }
     
- 
+ @Test
+    public void testConvertDateYear() {
+        //given
+        String nbr = "123";
+        RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
+        String expResult = "XV/III/MX";
+        
+        //when
+        String result = instance.convertDateYears(nbr);
+        
+        //then
+        assertEquals(expResult, result);
+        
+    }
+    
+    @Test
+    public void testConvertRomanToArabe() {
+        //given
+        String nbr = "123";
+        RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
+        Integer expResult = 3;
+        
+        //when
+        Integer result = instance.convertRomanToArabe(nbr);
+        
+        //then
+        assertEquals(expResult, result);
+        
+    }
         
     
     

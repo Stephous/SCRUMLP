@@ -156,26 +156,26 @@ public class PourcentagePresenter extends Composite {
         try {
             value1 = Integer.parseInt(valA.getText());
         } catch (NumberFormatException e) {
-            errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Valeur incorect");
+            errorLabelPreValue.addStyleName("serverResponseLabelError");
+            errorLabelPreValue.setText("Valeur incorect");
             return;
         }
         Integer value2 = null;
         try {
             value2 = Integer.parseInt(valPc2.getText());
         } catch (NumberFormatException e) {
-            errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Pourcentage incorrect");
+            errorLabelPreValue.addStyleName("serverResponseLabelError");
+            errorLabelPreValue.setText("Pourcentage incorrect");
             return;
         }
         if (!FieldVerifier.isValidDecimal(value1)) {
-            errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Valeur incorect (doit etre positive)");
+            errorLabelPreValue.addStyleName("serverResponseLabelError");
+            errorLabelPreValue.setText("Valeur incorect (doit etre positive)");
             return;
         }
         if (!FieldVerifier.isValidPourcentage(value2)) {
-            errorLabelNewValue.addStyleName("serverResponseLabelError");
-            errorLabelNewValue.setText("Pourcentage incorect (doit etre compris entre -100 et 100");
+            errorLabelPreValue.addStyleName("serverResponseLabelError");
+            errorLabelPreValue.setText("Pourcentage incorect (doit etre compris entre -100 et 100");
             return;
         }
         service.PreValue(value1,value2, new AsyncCallback<Integer>() {
@@ -185,9 +185,9 @@ public class PourcentagePresenter extends Composite {
             }
 
             public void onSuccess(Integer result) {
-                errorLabelNewValue.setText(" ");
+                errorLabelPreValue.setText(" ");
                 String envoi;
-                envoi = valR.getText() + " et " + valPc1.getText() + "%";
+                envoi = valA.getText() + " et " + valPc2.getText() + "%";
                 new DialogBoxInssetPresenter("Avant Remise", envoi, String.valueOf(result));
             }
         });

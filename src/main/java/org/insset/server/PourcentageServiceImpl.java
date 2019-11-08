@@ -19,13 +19,13 @@ public class PourcentageServiceImpl extends RemoteServiceServlet implements
     @Override
     public Integer NewValue(Integer nbr, Integer pc) throws IllegalArgumentException {
         //Implement your code
-        return (nbr - (nbr * pc) / 100);
+        return nbr - ((nbr * pc) / 100);
     }
 
     @Override
     public Integer PreValue(Integer nbr, Integer pc) throws IllegalArgumentException {
         //Implement your code
-        return ((nbr * (100+pc)) / 100);
+        return (nbr*100) / (100-pc);
     }
 
 }

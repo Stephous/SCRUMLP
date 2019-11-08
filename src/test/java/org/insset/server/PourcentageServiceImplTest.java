@@ -94,9 +94,9 @@ public class PourcentageServiceImplTest {
     public void testPreValueOK() {
         //given
         Integer nbr = 100;
-        Integer pc = 20;
+        Integer pc = 80;
         PourcentageServiceImpl instance = new PourcentageServiceImpl();
-        Integer expResult = 120;
+        Integer expResult = 500;
         
         //when
         Integer result = instance.PreValue(nbr, pc);
@@ -109,9 +109,9 @@ public class PourcentageServiceImplTest {
     public void testPreValueOKneg() {
         //given
         Integer nbr = 100;
-        Integer pc = -20;
+        Integer pc = -80;
         PourcentageServiceImpl instance = new PourcentageServiceImpl();
-        Integer expResult = 80;
+        Integer expResult = 55;
         
         //when
         Integer result = instance.PreValue(nbr, pc);
