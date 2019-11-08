@@ -55,6 +55,13 @@ public class FieldVerifier {
         //Implement your code
         return true;
     }
+    
+    public static boolean isValidDecimalAtoR(Integer nbr) {
+        if ((nbr == null) || (nbr<1)|| (nbr>1999)) {
+            return false;
+        }
+        return true;
+    }
 
     public static boolean isValidRoman(String nbr) {
         //Implement your code
